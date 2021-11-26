@@ -1,0 +1,1 @@
+<img class="circular" src="<?=SITE_TEMPLATE_PATH;?>/img/000.jpg" no-repeat>
