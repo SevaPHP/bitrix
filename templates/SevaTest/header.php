@@ -134,11 +134,17 @@ IncludeTemplateLangFile(__FILE__);
 
 							<!-- Menue-Search-bar -->
 							<div id="sb-search" class="sb-search " >
-							    <form>
+								<?$APPLICATION->IncludeComponent("bitrix:search.form", "search", Array(
+									"PAGE" => "#SITE_DIR#search/index.php",	// Страница выдачи результатов поиска (доступен макрос #SITE_DIR#)
+										"USE_SUGGEST" => "N",	// Показывать подсказку с поисковыми фразами
+									),
+									false
+								);?>
+															   <!--  <form>
 							        <input class="sb-search-input " onkeyup="buttonUp();" placeholder=	"Enter your search term..." onblur="monkey();" type="search" value="" name="search" id="search">
 							        <input class="sb-search-submit" type="submit"  value="">
 							        <span class="sb-icon-search"><i class="fa fa-search"></i></span>
-							    </form>
+							    </form> -->
 							</div>
 							<!-- /Menue-search-bar -->
 						</div>	
